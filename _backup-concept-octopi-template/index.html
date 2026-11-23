@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Women in Poker — a free program by Octopi Poker × Ladies of the Hippodrome League</title>
+<meta name="description" content="Women in Poker is a free program for women poker players worldwide: My First Solver course, monthly live lectures with coach Victoria Livschitz, weekly drills and a private community.">
+<link rel="canonical" href="https://go.octopipoker.ai/womeninpoker/">
+<link rel="icon" href="images/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<meta property="og:title" content="Women in Poker — free program by Octopi Poker">
+<meta property="og:description" content="Free solver course, monthly live lectures, weekly drills and a private community for women in poker.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg-page:#141029;--bg-surface:#1B1636;--bg-card:#221B42;--bg-card-2:#2A2250;
+  --border:#372E63;--border-bright:#463B7C;
+  --text-primary:#fff;--text-secondary:#B7B0CE;--text-muted:#8D87AC;
+  --brand:#6C5CE7;--brand-bright:#8A7BFF;--brand-hover:#5B4BD6;--lavender:#B9AEFF;--mint:#2ED8A3;
+  --rose:#FF7FA8;
+  --col-width:1080px;--page-pad:24px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg-page)}
+body{font-family:Inter,system-ui,sans-serif;background:transparent;color:var(--text-primary);-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(46% 40% at 50% 4%,rgba(138,123,255,.18),transparent 68%),radial-gradient(60% 46% at 50% 22%,rgba(108,92,231,.14),transparent 72%)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+h1,h2,h3{font-family:Poppins,sans-serif;letter-spacing:-.02em;line-height:1.15;text-wrap:balance}
+.wrap{max-width:var(--col-width);margin:0 auto;padding:0 var(--page-pad)}
+section{position:relative;z-index:1}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--lavender);margin-bottom:18px}
+.section-title{font-weight:700;font-size:clamp(24px,3vw,34px);margin-bottom:14px}
+.section-sub{color:var(--text-secondary);font-size:15.5px;max-width:60ch}
+.center{text-align:center}.center .section-sub{margin:0 auto}
+.pad{padding-bottom:84px}
+
+/* buttons */
+.btn-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:17px 58px;border-radius:8px;background:linear-gradient(135deg,var(--brand-bright),var(--brand));color:#fff;font-size:15px;font-weight:700;transition:transform .15s,box-shadow .15s,filter .15s}
+.btn-cta:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(108,92,231,.44);filter:brightness(1.06)}
+.btn-cta svg{width:16px;height:16px}
+.btn-quiet{display:inline-flex;align-items:center;gap:8px;padding:17px 28px;border-radius:8px;border:1px solid var(--border-bright);color:var(--text-secondary);font-size:15px;font-weight:600;transition:border-color .2s,color .2s}
+.btn-quiet:hover{border-color:var(--brand);color:#fff}
+.btn-sm{padding:10px 20px;font-size:13.5px}
+.cta-note{margin-top:10px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted)}
+:focus-visible{outline:2px solid var(--brand-bright);outline-offset:3px;border-radius:6px}
+
+/* header */
+.site-header{position:relative;z-index:3;max-width:var(--col-width);margin:0 auto;padding:22px var(--page-pad);display:flex;align-items:center;gap:20px}
+.lockup{display:flex;align-items:center;gap:16px}
+.lockup .octopi{height:38px;width:auto}
+.lockup .x{color:var(--text-muted);font-size:14px}
+/* TODO: replace with Ladies of the Hippodrome League logo when received */
+.partner-text{font-family:Poppins,sans-serif;font-size:12.5px;font-weight:600;line-height:1.2;color:var(--text-secondary);letter-spacing:.02em}
+.partner-text b{display:block;color:#fff;font-size:14px}
+.header-right{margin-left:auto}
+
+/* hero */
+.hero{overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.05;background:url("images/hero-lines.svg") center/cover no-repeat;
+  -webkit-mask-image:radial-gradient(82% 72% at 50% 46%,#000 0%,rgba(0,0,0,.68) 40%,rgba(0,0,0,.26) 64%,transparent 84%);mask-image:radial-gradient(82% 72% at 50% 46%,#000 0%,rgba(0,0,0,.68) 40%,rgba(0,0,0,.26) 64%,transparent 84%)}
+.hero-inner{position:relative;z-index:2;max-width:var(--col-width);margin:0 auto;padding:52px var(--page-pad) 84px;display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(36px,5vw,58px);font-weight:700}
+.hero h1 .accent{color:var(--lavender)}
+.hero-body{color:var(--text-secondary);font-size:16.5px;margin-top:20px;max-width:52ch}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.pill{font-size:12.5px;font-weight:600;color:var(--text-secondary);background:var(--bg-card);border:1px solid var(--border);border-radius:999px;padding:6px 12px}
+.pill b{color:var(--mint);font-weight:700}
+.hero-cta-row{margin-top:32px;display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap}
+.cta-stack{display:flex;flex-direction:column;align-items:center}
+.hero-art{position:relative}
+.hero-art svg{width:100%;height:auto;filter:drop-shadow(0 40px 80px rgba(0,0,0,.6));animation:float 9s ease-in-out infinite}
+.hero-art::before{content:"";position:absolute;inset:14% 10%;border-radius:50%;z-index:-1;background:radial-gradient(circle,rgba(108,92,231,.34),transparent 66%);filter:blur(48px)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+
+/* included */
+.inc-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;margin-top:34px}
+.inc{grid-column:span 2;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:24px 22px 22px;transition:border-color .2s,transform .2s,background .2s}
+.inc:nth-child(4),.inc:nth-child(5){grid-column:span 3}
+.inc:hover{border-color:var(--border-bright);background:var(--bg-card-2);transform:translateY(-3px)}
+.inc-ico{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;background:rgba(108,92,231,.18);color:var(--lavender);margin-bottom:16px}
+.inc-ico svg{width:22px;height:22px}
+.inc h3{font-size:16.5px;font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.tag{font-family:Inter,sans-serif;font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--mint);border:1px solid rgba(46,216,163,.4);border-radius:999px;padding:2px 8px}
+.inc p{font-size:14px;color:var(--text-muted);line-height:1.6}
+
+/* lectures */
+.lect{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.lect-facts{list-style:none;display:grid;gap:14px;margin-top:26px}
+.lect-facts li{display:flex;gap:14px;align-items:flex-start;font-size:15px;color:var(--text-secondary)}
+.lect-facts li svg{flex:0 0 auto;width:20px;height:20px;color:var(--lavender);margin-top:2px}
+.lect-facts b{color:#fff;font-weight:600}
+.dates{background:linear-gradient(160deg,var(--bg-card-2) 0%,var(--bg-surface) 100%);border:1px solid var(--border-bright);border-radius:16px;padding:26px}
+.dates h3{font-size:15px;font-weight:600;color:var(--text-secondary);margin-bottom:16px;font-family:Inter,sans-serif;letter-spacing:0}
+.date-row{display:flex;align-items:center;gap:16px;padding:14px 0;border-top:1px solid var(--border)}
+.date-row:first-of-type{border-top:none}
+.date-badge{flex:0 0 56px;height:60px;border-radius:10px;background:var(--bg-card);border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1}
+.date-badge small{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--lavender)}
+.date-badge strong{font-family:Poppins,sans-serif;font-size:22px}
+.date-row.first .date-badge{background:var(--brand);border-color:var(--brand-bright)}
+.date-row.first .date-badge small{color:#fff}
+.date-info b{display:block;font-size:15px;font-weight:600}
+.date-info span{font-size:13px;color:var(--text-muted)}
+.first-tag{display:block;font-style:normal;margin-bottom:2px;font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--mint)}
+.tz-note{margin-top:14px;font-size:12.5px;color:var(--text-muted)}
+
+/* people */
+.people{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:34px}
+.person{display:flex;gap:20px;align-items:flex-start;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:26px}
+/* TODO: replace .avatar initials with real photos when received */
+.avatar{flex:0 0 84px;height:84px;border-radius:50%;display:grid;place-items:center;font-family:Poppins,sans-serif;font-weight:700;font-size:26px;color:#fff;background:linear-gradient(135deg,var(--brand-bright),var(--brand));box-shadow:0 0 0 4px var(--bg-card-2),0 0 0 5px var(--border-bright)}
+.avatar.alt{background:linear-gradient(135deg,var(--rose),#B54BD6)}
+.person .role{font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--lavender);margin-bottom:4px}
+.person h3{font-size:20px;font-weight:700;margin-bottom:4px}
+.person .org{font-size:13.5px;color:var(--text-secondary);margin-bottom:10px}
+.person p{font-size:14px;color:var(--text-muted)}
+
+/* join */
+.join-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.way{position:relative;display:flex;flex-direction:column;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:26px 24px}
+.way-n{font-family:Poppins,sans-serif;font-style:italic;font-weight:700;font-size:22px;color:var(--lavender);margin-bottom:10px}
+.way h3{font-size:17px;font-weight:600;margin-bottom:8px}
+.way p{font-size:14px;color:var(--text-muted);margin-bottom:18px}
+.way .push{margin-top:auto}
+.code{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--bg-page);border:1px dashed var(--brand-bright);border-radius:10px;padding:10px 10px 10px 16px}
+.code span{font-family:Poppins,sans-serif;font-weight:700;font-size:18px;letter-spacing:.04em}
+.code button{font-size:12.5px;font-weight:700;color:#fff;background:var(--brand);border-radius:7px;padding:8px 12px;transition:background .2s}
+.code button:hover{background:var(--brand-bright)}
+.qr{width:150px;border-radius:12px;padding:12px;background:#24232B;border:1px solid var(--border-bright);margin-top:auto}
+
+/* sponsors */
+.sponsors{display:flex;justify-content:center;align-items:center;gap:28px;flex-wrap:wrap;margin-top:30px}
+.sponsor{display:flex;align-items:center;justify-content:center;min-width:240px;height:96px;padding:0 28px;border-radius:14px;background:var(--bg-card);border:1px solid var(--border)}
+.sponsor img{height:40px;width:auto}
+.sponsor-x{font-size:22px;color:var(--text-muted)}
+
+/* faq */
+.faq-list{display:flex;flex-direction:column;gap:10px;margin:34px auto 0;max-width:760px}
+.qa{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .2s}
+.qa.open{border-color:var(--border-bright);background:var(--bg-card-2)}
+.qa>button{width:100%;display:flex;align-items:center;gap:18px;padding:19px 22px;text-align:left;font-size:15px;font-weight:600}
+.plus{margin-left:auto;flex:0 0 auto;width:15px;height:15px;position:relative;transition:transform .3s}
+.plus::before,.plus::after{content:"";position:absolute;background:var(--lavender);border-radius:2px}
+.plus::before{top:7px;left:0;width:15px;height:2px}.plus::after{left:7px;top:0;width:2px;height:15px}
+.qa.open .plus{transform:rotate(135deg)}
+.qa .a{max-height:0;overflow:hidden;transition:max-height .35s}
+.qa .a p{padding:0 22px 20px;font-size:14px;color:var(--text-muted);line-height:1.7;max-width:66ch}
+.qa .a a{color:var(--lavender);text-decoration:underline;text-underline-offset:2px}
+
+/* closing */
+.closing-panel{position:relative;overflow:hidden;border-radius:16px;text-align:center;padding:64px 32px 68px;background:linear-gradient(160deg,var(--bg-card-2) 0%,var(--bg-surface) 100%);border:1px solid var(--border-bright)}
+.closing-panel::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:url("images/Octopi_Patern_White.png");background-size:260px auto;opacity:.05;-webkit-mask-image:radial-gradient(80% 90%,#000,transparent 80%);mask-image:radial-gradient(80% 90%,#000,transparent 80%)}
+.closing-panel>*{position:relative;z-index:1}
+.closing-panel h2{font-size:clamp(26px,3.4vw,40px);font-weight:700}
+.closing-panel p{color:var(--text-secondary);margin:16px auto 30px;max-width:46ch;font-size:16px}
+
+/* footer */
+.footer{border-top:1px solid var(--border);background:var(--bg-surface);padding:26px 0}
+.footer-in{max-width:var(--col-width);margin:0 auto;padding:0 var(--page-pad);display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:12.5px;color:var(--text-muted)}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+.footer-links a:hover{color:var(--lavender)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+.no-js .rv{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.hero-art svg{animation:none}.rv{opacity:1;transform:none;transition:none}}
+
+@media (max-width:900px){
+  .site-header{padding:18px var(--page-pad);gap:12px}
+  .lockup{gap:10px}.lockup .octopi{height:30px}
+  .partner-text{font-size:11px}.partner-text b{font-size:12.5px}
+  .header-right{display:none}
+  .hero-inner{grid-template-columns:1fr;gap:28px;padding:24px var(--page-pad) 60px}
+  .hero-art{max-width:340px;margin:0 auto;order:-1}
+  .hero-cta-row{flex-direction:column;align-items:stretch}
+  .btn-cta,.btn-quiet{width:100%}
+  .cta-note{text-align:center}
+  .inc-grid{grid-template-columns:1fr}
+  .inc,.inc:nth-child(4),.inc:nth-child(5){grid-column:auto}
+  .lect{grid-template-columns:1fr;gap:30px}
+  .people,.join-grid{grid-template-columns:1fr}
+  .person{flex-direction:column;align-items:center;text-align:center}
+  .qr{margin:0 auto}
+  .pad{padding-bottom:60px}
+  .closing-panel{padding:48px 22px 52px}
+  .footer-in{flex-direction:column;gap:14px;text-align:center}
+}
+</style>
+</head>
+<body class="no-js">
+
+<!-- ====== CONFIG: all "Join now" buttons point to the Octopi group invite ====== -->
+<header class="site-header">
+  <a class="lockup" href="#top" aria-label="Women in Poker — home">
+    <img class="octopi" src="images/octopi-logo-white.svg" alt="Octopi Poker" width="114" height="38">
+    <span class="x" aria-hidden="true">×</span>
+    <span class="partner-text">Ladies of the<b>Hippodrome League</b></span>
+  </a>
+  <div class="header-right">
+    <a class="btn-cta btn-sm" href="https://octopipoker.ai/groups/invite/t_TD1IRiWFiP7XOchKRn5A" data-cta="header">Join now</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <p class="eyebrow">Free program · Open to women worldwide</p>
+      <h1>Women in Poker.<br><span class="accent">Learn the game together.</span></h1>
+      <p class="hero-body">A free study program for women who want to play smarter poker. Learn solver fundamentals, join monthly live lectures with coach Victoria Livschitz, and practise every week with a community that has your back.</p>
+      <div class="pills">
+        <span class="pill"><b>Free</b> My First Solver course</span>
+        <span class="pill"><b>Free</b> monthly live lectures</span>
+        <span class="pill">Weekly drills &amp; quizzes</span>
+        <span class="pill">Private Discord</span>
+      </div>
+      <div class="hero-cta-row">
+        <div class="cta-stack">
+          <a class="btn-cta" href="https://octopipoker.ai/groups/invite/t_TD1IRiWFiP7XOchKRn5A" data-cta="hero">Join now
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <span class="cta-note">Free to join · Leave anytime</span>
+        </div>
+        <a class="btn-quiet" href="#included">What's included</a>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <!-- Neutral illustrated hero (no coach photos). Swap for a photo composite if decided. -->
+      <svg viewBox="0 0 440 420" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="cardFace" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E9E5FF"/></linearGradient>
+          <linearGradient id="cardBack" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8A7BFF"/><stop offset="1" stop-color="#4B3CC4"/></linearGradient>
+          <linearGradient id="chipA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF9DBE"/><stop offset="1" stop-color="#E0457C"/></linearGradient>
+          <linearGradient id="chipB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5EF0C2"/><stop offset="1" stop-color="#1BAF83"/></linearGradient>
+          <pattern id="backPat" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="18" height="18" fill="none"/><path d="M0 9h18" stroke="rgba(255,255,255,.13)" stroke-width="5"/></pattern>
+        </defs>
+        <!-- back card -->
+        <g transform="translate(84 92) rotate(-22 80 115)">
+          <rect width="160" height="230" rx="16" fill="url(#cardBack)"/>
+          <rect x="10" y="10" width="140" height="210" rx="10" fill="url(#backPat)" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+          <circle cx="80" cy="115" r="30" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="3"/>
+          <path d="M80 98c6 10 16 14 16 22a9 9 0 0 1-16 6 9 9 0 0 1-16-6c0-8 10-12 16-22z" fill="rgba(255,255,255,.7)"/>
+        </g>
+        <!-- A spade -->
+        <g transform="translate(232 96) rotate(18 80 115)">
+          <rect width="160" height="230" rx="16" fill="url(#cardFace)"/>
+          <text x="16" y="42" font-family="Poppins,sans-serif" font-weight="700" font-size="30" fill="#1B1636">A</text>
+          <path d="M28 52c5 8 12 11 12 17a7 7 0 0 1-12 4 7 7 0 0 1-12-4c0-6 7-9 12-17z" fill="#1B1636"/>
+          <path d="M80 82c18 28 44 38 44 60a22 22 0 0 1-38 15l6 24H68l6-24a22 22 0 0 1-38-15c0-22 26-32 44-60z" fill="#1B1636"/>
+        </g>
+        <!-- Q heart (front) -->
+        <g transform="translate(128 70) rotate(-4 80 115)">
+          <rect width="160" height="230" rx="16" fill="url(#cardFace)" stroke="#B9AEFF" stroke-width="2"/>
+          <text x="16" y="42" font-family="Poppins,sans-serif" font-weight="700" font-size="30" fill="#E0457C">Q</text>
+          <path d="M28 70c-9-6-13-10-13-15a6.5 6.5 0 0 1 13-2 6.5 6.5 0 0 1 13 2c0 5-4 9-13 15z" fill="#E0457C"/>
+          <path d="M80 168c-30-20-46-34-46-52a23 23 0 0 1 46-6 23 23 0 0 1 46 6c0 18-16 32-46 52z" fill="#E0457C"/>
+          <g transform="rotate(180 80 115)">
+            <text x="16" y="42" font-family="Poppins,sans-serif" font-weight="700" font-size="30" fill="#E0457C">Q</text>
+          </g>
+        </g>
+        <!-- chips -->
+        <g transform="translate(70 300)">
+          <ellipse cx="40" cy="44" rx="40" ry="14" fill="#C23768"/>
+          <rect x="0" y="30" width="80" height="14" fill="#C23768"/>
+          <ellipse cx="40" cy="30" rx="40" ry="14" fill="url(#chipA)"/>
+          <ellipse cx="40" cy="30" rx="26" ry="8.5" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="8 6"/>
+          <ellipse cx="40" cy="22" rx="40" ry="14" fill="url(#chipA)" transform="translate(0 -8)"/>
+          <ellipse cx="40" cy="14" rx="26" ry="8.5" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="8 6"/>
+        </g>
+        <g transform="translate(300 318)">
+          <ellipse cx="38" cy="34" rx="38" ry="13" fill="#138A67"/>
+          <rect x="0" y="22" width="76" height="12" fill="#138A67"/>
+          <ellipse cx="38" cy="22" rx="38" ry="13" fill="url(#chipB)"/>
+          <ellipse cx="38" cy="22" rx="24" ry="8" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="8 6"/>
+        </g>
+        <!-- sparkles -->
+        <path d="M380 70l5 13 13 5-13 5-5 13-5-13-13-5 13-5z" fill="#B9AEFF"/>
+        <path d="M46 120l3.5 9 9 3.5-9 3.5-3.5 9-3.5-9-9-3.5 9-3.5z" fill="#FF7FA8"/>
+        <path d="M400 250l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#2ED8A3"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section id="included" class="wrap pad rv">
+  <p class="eyebrow">What's included</p>
+  <h2 class="section-title">Everything you need to level up your game</h2>
+  <p class="section-sub">The program combines structured learning, live coaching and a supportive community — built for women at every level, from first steps to serious study.</p>
+
+  <div class="inc-grid">
+    <article class="inc">
+      <div class="inc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H20v14H5.5A1.5 1.5 0 0 0 4 19.5z"/><path d="M4 19.5A1.5 1.5 0 0 0 5.5 21H20v-3"/><path d="M9 8h7M9 11h5"/></svg></div>
+      <h3>My First Solver course <span class="tag">Free</span></h3>
+      <p>Understand how solvers think and how to use them in your own study — no prior experience needed.</p>
+    </article>
+    <article class="inc">
+      <div class="inc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="13" height="14" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg></div>
+      <h3>Monthly live lectures <span class="tag">Free</span></h3>
+      <p>Live video sessions with coach Victoria Livschitz. Every lecture is recorded and shared with members.</p>
+    </article>
+    <article class="inc">
+      <div class="inc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div>
+      <h3>Weekly homework</h3>
+      <p>Regular drills and quizzes that turn each lecture into real, repeatable skills at the table.</p>
+    </article>
+    <article class="inc">
+      <div class="inc-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 2.9a13.7 13.7 0 0 0-.6 1.3 18.3 18.3 0 0 0-5.5 0 12.6 12.6 0 0 0-.6-1.3 19.7 19.7 0 0 0-4.9 1.5C.5 9 -.3 13.6.1 18.1a19.9 19.9 0 0 0 6 3c.5-.6.9-1.3 1.2-2a13 13 0 0 1-1.9-.9l.5-.4c3.9 1.8 8.2 1.8 12.1 0l.4.4c-.6.4-1.2.7-1.9.9.4.7.8 1.4 1.2 2a19.8 19.8 0 0 0 6-3c.5-5.2-.8-9.7-3.5-13.7zM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4z"/></svg></div>
+      <h3>Private Discord community</h3>
+      <p>Discuss hands, ask questions and connect with women players from around the world.</p>
+    </article>
+    <article class="inc">
+      <div class="inc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14.2c2.8.2 5 2.6 5 5.8"/></svg></div>
+      <h3>Women in Poker group on Octopi</h3>
+      <p>Your study hub inside Octopi Poker — where homework, drills and group progress live.</p>
+    </article>
+  </div>
+</section>
+
+<!-- LECTURES -->
+<section id="lectures" class="wrap pad rv">
+  <div class="lect">
+    <div>
+      <p class="eyebrow">Monthly lectures</p>
+      <h2 class="section-title">Live with your coach, every first Wednesday</h2>
+      <p class="section-sub">Lectures run on the first Wednesday of every month. Can't make it live? Every session is recorded and shared with members.</p>
+      <ul class="lect-facts">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg><span><b>10:00 AM Pacific Time</b> (PST)</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke-linecap="round"/></svg><span><b>Starts December 2, 2026</b></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16v10H8l-4 4z" stroke-linejoin="round"/></svg><span>Dial-in details are sent to members separately</span></li>
+      </ul>
+    </div>
+    <div class="dates" aria-label="Upcoming lectures">
+      <h3>Upcoming lectures</h3>
+      <div id="date-list">
+        <!-- Rendered with local times by script; static fallback below -->
+        <div class="date-row first"><div class="date-badge"><small>Dec</small><strong>2</strong></div><div class="date-info"><em class="first-tag">First lecture</em><b>Wednesday, December 2, 2026</b><span>10:00 AM PST</span></div></div>
+        <div class="date-row"><div class="date-badge"><small>Jan</small><strong>6</strong></div><div class="date-info"><b>Wednesday, January 6, 2027</b><span>10:00 AM PST</span></div></div>
+        <div class="date-row"><div class="date-badge"><small>Feb</small><strong>3</strong></div><div class="date-info"><b>Wednesday, February 3, 2027</b><span>10:00 AM PST</span></div></div>
+        <div class="date-row"><div class="date-badge"><small>Mar</small><strong>3</strong></div><div class="date-info"><b>Wednesday, March 3, 2027</b><span>10:00 AM PST</span></div></div>
+      </div>
+      <p class="tz-note" id="tz-note"></p>
+    </div>
+  </div>
+</section>
+
+<!-- PEOPLE -->
+<section id="founders" class="wrap pad rv">
+  <p class="eyebrow">Founders &amp; coach</p>
+  <h2 class="section-title">Meet the founders</h2>
+  <p class="section-sub">Women in Poker is co-founded by Octopi Poker and Ladies of the Hippodrome League.</p>
+  <div class="people">
+    <article class="person">
+      <div class="avatar" aria-hidden="true">VL</div>
+      <div>
+        <p class="role">Coach · Co-founder</p>
+        <h3>Victoria Livschitz</h3>
+        <p class="org">Octopi Poker</p>
+        <!-- TODO: short bio from Victoria -->
+        <p>Victoria leads the monthly lectures and guides the program's curriculum, from solver basics to applying strategy at the table.</p>
+      </div>
+    </article>
+    <article class="person">
+      <div class="avatar alt" aria-hidden="true">KC</div>
+      <div>
+        <p class="role">Co-founder</p>
+        <h3>Kerryjane Craigie</h3>
+        <p class="org">Ladies of the Hippodrome League</p>
+        <!-- TODO: short bio from Kerryjane -->
+        <p>Kerryjane brings the Ladies of the Hippodrome League community to the program, connecting women players from the UK and beyond.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- HOW TO JOIN -->
+<section id="join" class="wrap pad rv">
+  <div class="center">
+    <p class="eyebrow">How to join</p>
+    <h2 class="section-title">Three ways to join</h2>
+    <p class="section-sub">Membership is voluntary — join whenever you're ready and leave at any time.</p>
+  </div>
+  <div class="join-grid">
+    <article class="way">
+      <span class="way-n">01</span>
+      <h3>Click "Join now"</h3>
+      <p>The fastest way in. You'll be taken straight to the Women in Poker group on Octopi.</p>
+      <a class="btn-cta push" href="https://octopipoker.ai/groups/invite/t_TD1IRiWFiP7XOchKRn5A" data-cta="join-card">Join now</a>
+    </article>
+    <article class="way">
+      <span class="way-n">02</span>
+      <h3>Subscribe with our code</h3>
+      <p>Getting an Octopi Poker subscription? Use this code at checkout to join the program.</p>
+      <div class="code push">
+        <span id="promo">Poker4Women</span>
+        <button type="button" id="copy-btn" aria-label="Copy code Poker4Women">Copy</button>
+      </div>
+    </article>
+    <article class="way">
+      <span class="way-n">03</span>
+      <h3>Scan the QR code</h3>
+      <p>On another device? Scan to open the Women in Poker group invite.</p>
+      <img class="qr" src="images/qr-women-in-poker.png" alt="QR code linking to the Women in Poker group on Octopi Poker" width="150" height="150">
+    </article>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section id="sponsors" class="wrap pad rv center">
+  <p class="eyebrow">Sponsors</p>
+  <h2 class="section-title">Brought to you by</h2>
+  <div class="sponsors">
+    <div class="sponsor"><img src="images/octopi-logo-white.svg" alt="Octopi Poker" width="120" height="40"></div>
+    <span class="sponsor-x" aria-hidden="true">×</span>
+    <!-- TODO: Hippodrome logo -->
+    <div class="sponsor"><span class="partner-text">Ladies of the<b>Hippodrome League</b></span></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="wrap pad rv">
+  <div class="center">
+    <p class="eyebrow">FAQ</p>
+    <h2 class="section-title">Questions</h2>
+  </div>
+  <div class="faq-list">
+    <div class="qa"><button type="button" aria-expanded="false">Who can join?<span class="plus"></span></button>
+      <div class="a"><p>The program is open to all women — anyone who identifies as a woman — anywhere in the world, at any skill level.</p></div></div>
+    <div class="qa"><button type="button" aria-expanded="false">Is it really free?<span class="plus"></span></button>
+      <!-- TODO: confirm subscription wording with Victoria -->
+      <div class="a"><p>Yes — the program is free. The My First Solver course and the monthly lectures cost nothing. The Women in Poker group lives inside Octopi Poker, so if you don't have an Octopi subscription yet, you'll be offered one when you open the invite — use code <b>Poker4Women</b> at checkout.</p></div></div>
+    <div class="qa"><button type="button" aria-expanded="false">When are the lectures?<span class="plus"></span></button>
+      <div class="a"><p>On the first Wednesday of every month at 10:00 AM Pacific Time, starting December 2, 2026. Dial-in details are sent to members separately, and recordings are shared after each session.</p></div></div>
+    <div class="qa"><button type="button" aria-expanded="false">How do I join the Discord?<span class="plus"></span></button>
+      <!-- TODO: replace with a permanent (non-expiring) Discord invite -->
+      <div class="a"><p>Members can join our private Discord here: <a href="https://discord.gg/yrNg5E2b" target="_blank" rel="noopener">discord.gg/yrNg5E2b</a>.</p></div></div>
+    <div class="qa"><button type="button" aria-expanded="false">Can I leave the program?<span class="plus"></span></button>
+      <div class="a"><p>Of course. Membership is voluntary — you can join and leave at any time.</p></div></div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="wrap pad rv">
+  <div class="closing-panel">
+    <h2>Your seat at the table is waiting</h2>
+    <p>Join Women in Poker today and get ready for the first live lecture on December 2.</p>
+    <div class="cta-stack">
+      <a class="btn-cta" href="https://octopipoker.ai/groups/invite/t_TD1IRiWFiP7XOchKRn5A" data-cta="closing">Join now
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <span class="cta-note">Free to join · Leave anytime</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-in">
+    <span>© 2026 Octopi Poker Studios, Inc. Women in Poker is co-sponsored by Octopi Poker and Ladies of the Hippodrome League.</span>
+    <nav class="footer-links" aria-label="Legal">
+      <a href="https://octopipoker.ai/aup">Acceptable Use</a>
+      <a href="https://octopipoker.ai/terms">Terms</a>
+      <a href="https://octopipoker.ai/privacy">Privacy</a>
+      <a href="https://octopipoker.ai/contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+document.body.classList.remove('no-js');
+
+// Reveal on scroll
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+
+// FAQ accordion
+document.querySelectorAll('.qa > button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var qa=btn.parentElement,a=qa.querySelector('.a'),open=qa.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+    a.style.maxHeight=open?a.scrollHeight+'px':'0';
+  });
+});
+
+// Copy promo code
+(function(){
+  var b=document.getElementById('copy-btn');
+  b.addEventListener('click',function(){
+    var t=document.getElementById('promo').textContent;
+    var done=function(){b.textContent='Copied!';setTimeout(function(){b.textContent='Copy'},1800)};
+    if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,function(){})}
+  });
+})();
+
+// Lecture dates in the visitor's local time (10:00 PST = 18:00 UTC; all listed dates fall in PST)
+(function(){
+  try{
+    var dates=[Date.UTC(2026,11,2,18),Date.UTC(2027,0,6,18),Date.UTC(2027,1,3,18),Date.UTC(2027,2,3,18)];
+    var now=Date.now();
+    var upcoming=dates.filter(function(d){return d+2*3600e3>now});
+    if(!upcoming.length)return;
+    var tz=Intl.DateTimeFormat().resolvedOptions().timeZone;
+    var f=function(o){return new Intl.DateTimeFormat('en-US',o)};
+    var mon=f({month:'short',timeZone:'America/Los_Angeles'}),day=f({day:'numeric',timeZone:'America/Los_Angeles'}),
+        full=f({weekday:'long',month:'long',day:'numeric',year:'numeric',timeZone:'America/Los_Angeles'}),
+        local=f({weekday:'short',hour:'numeric',minute:'2-digit',timeZoneName:'short'});
+    var html=upcoming.map(function(d,i){
+      var dt=new Date(d),isFirst=d===dates[0];
+      return '<div class="date-row'+(i===0?' first':'')+'"><div class="date-badge"><small>'+mon.format(dt)+'</small><strong>'+day.format(dt)+'</strong></div>'+
+        '<div class="date-info">'+(isFirst?'<em class="first-tag">First lecture</em>':'')+'<b>'+full.format(dt)+'</b><span>10:00 AM PST · '+local.format(dt)+' your time</span></div></div>';
+    }).join('');
+    document.getElementById('date-list').innerHTML=html;
+    if(tz)document.getElementById('tz-note').textContent='Local times shown for '+tz.replace(/_/g,' ')+'.';
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
