@@ -11,8 +11,7 @@ export const site = {
   // All "Join now" buttons. TODO: confirm with Victoria.
   joinUrl: "https://octopipoker.ai/groups/invite/t_TD1IRiWFiP7XOchKRn5A",
   promoCode: "Poker4Women",
-  // TODO: replace with a permanent (non-expiring) invite.
-  discordUrl: "https://discord.gg/yrNg5E2b",
+  discordUrl: "https://discord.gg/octopipoker",
 
   lecture: {
     rule: "First Wednesday of every month",
@@ -110,7 +109,7 @@ export const faq = [
   {
     q: "How do I join the Discord?",
     a: "Our private Discord is where the community talks hands, asks questions and keeps in touch between lectures. Join here:",
-    link: { href: site.discordUrl, label: "discord.gg/yrNg5E2b" },
+    link: { href: site.discordUrl, label: "discord.gg/octopipoker" },
   },
   {
     q: "Can I leave?",
