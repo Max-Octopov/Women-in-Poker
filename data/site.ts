@@ -98,9 +98,12 @@ export const faq = [
     a: "Not exactly. Women in Poker is a community first — a place to meet, talk and play with other women. Membership comes with a free education program: a starter course, monthly lectures and weekly practice.",
   },
   {
-    q: "Is it really free?",
-    // TODO: confirm subscription wording with Victoria
-    a: "Yes. The My First Solver course and the monthly lectures are free. The Women in Poker group lives inside Octopi Poker, so if you don't have an Octopi subscription yet you'll be offered one when you open the invite — use code Poker4Women at checkout.",
+    q: "Is there an additional cost to join the Women in Poker program?",
+    // Paragraphs; the promo code is rendered bold.
+    a: [
+      "No! The Women in Poker program is included at no extra cost with an Octopi Personal or Professional membership. This includes full access to the My First Solver course, monthly video lectures, weekly study assignments, and a private women's study group.",
+      "If you're already a Personal or Professional member, there's nothing extra to pay. If you're not yet a member, you can sign up using the code Poker4Women at checkout.",
+    ],
   },
   {
     q: "When are the lectures?",

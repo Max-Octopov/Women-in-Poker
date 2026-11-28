@@ -402,17 +402,30 @@ export default function Home() {
                       +
                     </span>
                   </summary>
-                  <p className="max-w-2xl pb-7 text-mauve">
-                    {f.a}
-                    {"link" in f ? (
-                      <>
-                        {" "}
-                        <a href={f.link.href} target="_blank" rel="noopener" className="text-champagne underline underline-offset-4">
-                          {f.link.label}
-                        </a>
-                      </>
-                    ) : null}
-                  </p>
+                  <div className="max-w-2xl space-y-4 pb-7 text-mauve">
+                    {(typeof f.a === "string" ? [f.a] : f.a).map((para, i, all) => (
+                      <p key={i}>
+                        {para.split(site.promoCode).map((part, j) =>
+                          j === 0 ? (
+                            part
+                          ) : (
+                            <span key={j}>
+                              <strong className="font-semibold text-champagne-light">{site.promoCode}</strong>
+                              {part}
+                            </span>
+                          ),
+                        )}
+                        {"link" in f && i === all.length - 1 ? (
+                          <>
+                            {" "}
+                            <a href={f.link.href} target="_blank" rel="noopener" className="text-champagne underline underline-offset-4">
+                              {f.link.label}
+                            </a>
+                          </>
+                        ) : null}
+                      </p>
+                    ))}
+                  </div>
                 </details>
               ))}
             </div>
