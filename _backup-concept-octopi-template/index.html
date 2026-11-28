@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Women in Poker — a free program by Octopi Poker × Ladies of the Hippodrome League</title>
-<meta name="description" content="Women in Poker is a free program for women poker players worldwide: My First Solver course, monthly live lectures with coach Victoria Livschitz, weekly drills and a private community.">
+<title>Women in Poker — a global poker community for women · Octopi Poker × Ladies of the Hippodrome League</title>
+<meta name="description" content="Women in Poker is a global community for women who play poker, with a free education program built in: the My First Solver course, monthly video lectures with coach Victoria Livschitz, weekly practice, a private Discord and an Octopi group. Founded by Octopi Poker and Ladies of the Hippodrome League.">
 <link rel="canonical" href="https://go.octopipoker.ai/womeninpoker/">
 <link rel="icon" href="images/favicon.ico">
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-<meta property="og:title" content="Women in Poker — free program by Octopi Poker">
-<meta property="og:description" content="Free solver course, monthly live lectures, weekly drills and a private community for women in poker.">
+<meta property="og:title" content="Women in Poker — a free global study group for women">
+<meta property="og:description" content="A free poker community for women: monthly lectures with Victoria Livschitz, weekly practice and a supportive network of women players worldwide.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -111,14 +111,20 @@ section{position:relative;z-index:1}
 
 /* people */
 .people{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:34px}
-.person{display:flex;gap:20px;align-items:flex-start;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:26px}
-/* TODO: replace .avatar initials with real photos when received */
-.avatar{flex:0 0 84px;height:84px;border-radius:50%;display:grid;place-items:center;font-family:Poppins,sans-serif;font-weight:700;font-size:26px;color:#fff;background:linear-gradient(135deg,var(--brand-bright),var(--brand));box-shadow:0 0 0 4px var(--bg-card-2),0 0 0 5px var(--border-bright)}
-.avatar.alt{background:linear-gradient(135deg,var(--rose),#B54BD6)}
+.person{display:flex;flex-direction:column;overflow:hidden;background:var(--bg-card);border:1px solid var(--border);border-radius:14px}
+.person .photo{aspect-ratio:20/19;overflow:hidden;background:var(--bg-card-2)}
+.person .photo img{width:100%;height:100%;object-fit:cover;object-position:top}
+/* Kerryjane's source photo has a cream frame baked in — zoom slightly to crop it out */
+.person .photo img.crop{transform:scale(1.07)}
+.person .body{padding:24px 26px 28px}
 .person .role{font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--lavender);margin-bottom:4px}
-.person h3{font-size:20px;font-weight:700;margin-bottom:4px}
+.person h3{font-size:22px;font-weight:700;margin-bottom:4px}
 .person .org{font-size:13.5px;color:var(--text-secondary);margin-bottom:10px}
 .person p{font-size:14px;color:var(--text-muted)}
+.points{list-style:none;display:grid;gap:12px;margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}
+.points li{display:flex;align-items:center;gap:14px;font-size:14.5px;color:var(--text-secondary)}
+.points svg{flex:0 0 auto;width:20px;height:20px;color:var(--lavender)}
+.person .bio{display:flex;gap:14px;margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}
 
 /* join */
 .join-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
@@ -150,6 +156,7 @@ section{position:relative;z-index:1}
 .qa.open .plus{transform:rotate(135deg)}
 .qa .a{max-height:0;overflow:hidden;transition:max-height .35s}
 .qa .a p{padding:0 22px 20px;font-size:14px;color:var(--text-muted);line-height:1.7;max-width:66ch}
+.qa .a b{color:var(--text-primary)}
 .qa .a a{color:var(--lavender);text-decoration:underline;text-underline-offset:2px}
 
 /* closing */
@@ -185,7 +192,6 @@ section{position:relative;z-index:1}
   .inc,.inc:nth-child(4),.inc:nth-child(5){grid-column:auto}
   .lect{grid-template-columns:1fr;gap:30px}
   .people,.join-grid{grid-template-columns:1fr}
-  .person{flex-direction:column;align-items:center;text-align:center}
   .qr{margin:0 auto}
   .pad{padding-bottom:60px}
   .closing-panel{padding:48px 22px 52px}
@@ -213,22 +219,16 @@ section{position:relative;z-index:1}
 <section class="hero">
   <div class="hero-inner">
     <div>
-      <p class="eyebrow">Free program · Open to women worldwide</p>
-      <h1>Women in Poker.<br><span class="accent">Learn the game together.</span></h1>
-      <p class="hero-body">A free study program for women who want to play smarter poker. Learn solver fundamentals, join monthly live lectures with coach Victoria Livschitz, and practise every week with a community that has your back.</p>
-      <div class="pills">
-        <span class="pill"><b>Free</b> My First Solver course</span>
-        <span class="pill"><b>Free</b> monthly live lectures</span>
-        <span class="pill">Weekly drills &amp; quizzes</span>
-        <span class="pill">Private Discord</span>
-      </div>
+      <p class="eyebrow">Octopi Poker × Ladies of the Hippodrome League</p>
+      <h1>Women in Poker.<br><span class="accent">A free global study group for women.</span></h1>
+      <p class="hero-body">A free poker community for women who want to learn, improve, and grow together. Join expert-led monthly lectures, weekly practice, and a supportive network of women who share your passion for the game. Open to all women, anywhere in the world. Join and leave at any time.</p>
       <div class="hero-cta-row">
         <div class="cta-stack">
-          <a class="btn-cta" href="https://octopipoker.ai/groups/invite/t_TD1IRiWFiP7XOchKRn5A" data-cta="hero">Join now
+          <a class="btn-cta" href="https://octopipoker.ai/groups/invite/t_TD1IRiWFiP7XOchKRn5A" data-cta="hero">Join the community
             <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <span class="cta-note">Free to join · Leave anytime</span>
         </div>
-        <a class="btn-quiet" href="#included">What's included</a>
+        <a class="btn-quiet" href="#included">What's inside</a>
       </div>
     </div>
 
@@ -290,37 +290,72 @@ section{position:relative;z-index:1}
   </div>
 </section>
 
-<!-- WHAT'S INCLUDED -->
+<!-- WHAT'S INSIDE -->
 <section id="included" class="wrap pad rv">
-  <p class="eyebrow">What's included</p>
-  <h2 class="section-title">Everything you need to level up your game</h2>
-  <p class="section-sub">The program combines structured learning, live coaching and a supportive community — built for women at every level, from first steps to serious study.</p>
+  <p class="eyebrow">What's inside</p>
+  <h2 class="section-title">A community first. With a program built in.</h2>
+  <p class="section-sub">Women in Poker brings women players together from around the world. Every member gets five things — all free, and you can join at any time.</p>
 
   <div class="inc-grid">
     <article class="inc">
       <div class="inc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H20v14H5.5A1.5 1.5 0 0 0 4 19.5z"/><path d="M4 19.5A1.5 1.5 0 0 0 5.5 21H20v-3"/><path d="M9 8h7M9 11h5"/></svg></div>
-      <h3>My First Solver course <span class="tag">Free</span></h3>
-      <p>Understand how solvers think and how to use them in your own study — no prior experience needed.</p>
+      <h3>My First Solver Course <span class="tag">Free course</span></h3>
+      <p>Free. Learn solver study from scratch.</p>
     </article>
     <article class="inc">
       <div class="inc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="13" height="14" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg></div>
-      <h3>Monthly live lectures <span class="tag">Free</span></h3>
-      <p>Live video sessions with coach Victoria Livschitz. Every lecture is recorded and shared with members.</p>
+      <h3>Monthly Video Lectures <span class="tag">Free · Recorded</span></h3>
+      <p>Live with Victoria. Recorded for members.</p>
     </article>
     <article class="inc">
       <div class="inc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div>
-      <h3>Weekly homework</h3>
-      <p>Regular drills and quizzes that turn each lecture into real, repeatable skills at the table.</p>
+      <h3>Weekly Homework Study <span class="tag">Drills &amp; quizzes</span></h3>
+      <p>Drills and quizzes to practice.</p>
     </article>
     <article class="inc">
       <div class="inc-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 2.9a13.7 13.7 0 0 0-.6 1.3 18.3 18.3 0 0 0-5.5 0 12.6 12.6 0 0 0-.6-1.3 19.7 19.7 0 0 0-4.9 1.5C.5 9 -.3 13.6.1 18.1a19.9 19.9 0 0 0 6 3c.5-.6.9-1.3 1.2-2a13 13 0 0 1-1.9-.9l.5-.4c3.9 1.8 8.2 1.8 12.1 0l.4.4c-.6.4-1.2.7-1.9.9.4.7.8 1.4 1.2 2a19.8 19.8 0 0 0 6-3c.5-5.2-.8-9.7-3.5-13.7zM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4z"/></svg></div>
-      <h3>Private Discord community</h3>
-      <p>Discuss hands, ask questions and connect with women players from around the world.</p>
+      <h3>Private Community Discord <span class="tag">Members only</span></h3>
+      <p>Ask questions. Talk hands with other women.</p>
     </article>
     <article class="inc">
       <div class="inc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14.2c2.8.2 5 2.6 5 5.8"/></svg></div>
-      <h3>Women in Poker group on Octopi</h3>
-      <p>Your study hub inside Octopi Poker — where homework, drills and group progress live.</p>
+      <h3>Private Octopi Group <span class="tag">Inside Octopi Poker</span></h3>
+      <p>Your study space inside Octopi Poker.</p>
+    </article>
+  </div>
+</section>
+
+<!-- FOUNDERS -->
+<section id="founders" class="wrap pad rv">
+  <p class="eyebrow">Founders &amp; partners</p>
+  <h2 class="section-title">Meet the founders</h2>
+  <p class="section-sub">Women in Poker is a joint initiative of Octopi Poker and Ladies of the Hippodrome League. Victoria Livschitz is also the community's coach.</p>
+  <div class="people">
+    <article class="person">
+      <div class="photo"><img src="images/coach-victoria.webp" alt="Portrait of Victoria Livschitz" width="1254" height="1254" loading="lazy"></div>
+      <div class="body">
+        <p class="role">Your Coach</p>
+        <h3>Victoria Livschitz</h3>
+        <ul class="points">
+          <li><svg viewBox="0 0 28.33 28.47" fill="currentColor" aria-hidden="true"><path d="M18.38,18.3c.63-.04,1.05.11,1.41.28.81.43,1.05,1.03,1.65,2.15.52.99,1.44,1.59,2.66,1.59,1.72,0,2.77-1.31,2.77-2.77,0-1.31-.83-2.06-1.05-2.06-.17,0-.24.07-.24.36,0,1.82-.39,2.38-1.37,2.38-.63,0-1.13-.51-1.48-1.46-.35-.99-.67-1.35-1.54-2.06-.46-.36-.94-.52-1.68-.75.52-.17.98-.21,1.33-.21,1.37,0,2.46,1.16,4.59,1.16,1.68,0,2.87-1.59,2.9-3.09,0-1.31-.83-2.41-1.96-2.41-.43,0-.67.11-.81.21-.15.09-.17.17-.04.28.24.11.55.24.78.47.28.24.39.6.39.99,0,.92-.52,1.59-1.54,1.59-1.17,0-2.47-1.23-4.12-1.34.78-.73,1.41-1.95,1.47-3.64.11-2.83.63-4.16,1.72-4.16.46,0,.87.36,1.09.96.11.28.17.36.28.36.15,0,.24-.47.24-.82,0-1.03-.87-2.19-2.24-2.19-2.2,0-2.87,2.19-2.98,4.53-.11,2.58-.94,4.04-2.63,4.04-1.05,0-1.65-.75-1.65-1.35,0-1.59,2.7-2.38,2.7-6.34-.04-2.9-2-5-4.94-5-2.87,0-4.83,2.1-4.83,5,0,3.97,2.7,4.75,2.7,6.34,0,.6-.59,1.35-1.65,1.35-1.68,0-2.52-1.46-2.63-4.04-.11-2.34-.78-4.53-2.98-4.53-1.37,0-2.24,1.16-2.24,2.19,0,.36.11.82.24.82.11,0,.17-.07.28-.36.2-.6.63-.96,1.09-.96,1.09,0,1.61,1.31,1.72,4.16.06,1.68.7,2.9,1.48,3.64-1.65.11-2.95,1.34-4.12,1.34-1.02,0-1.54-.67-1.54-1.59,0-.39.11-.75.39-.99.2-.21.52-.36.78-.47.15-.11.11-.17-.04-.28-.15-.11-.39-.21-.81-.21-1.13,0-1.96,1.1-1.96,2.41.04,1.5,1.18,3.09,3.05,3.09,1.96,0,3.09-1.16,4.44-1.16.35,0,.81.04,1.33.21-.74.21-1.22.39-1.68.75-.87.71-1.18,1.07-1.54,2.06-.35.95-.83,1.46-1.48,1.46-.98,0-1.37-.56-1.37-2.38,0-.28-.07-.36-.24-.36-.2,0-1.05.75-1.05,2.06,0,1.46,1.05,2.77,2.77,2.77,1.22,0,2.13-.6,2.66-1.59.59-1.14.83-1.74,1.65-2.15.35-.17.78-.32,1.41-.28-1.79,1.83-3.12,3.22-3.12,5.78,0,1.52.68,2.78,1.62,3.56.66.56,1.5.86,2.48.82,1.41-.14,2.25-1.24,2.25-2.17,0-.17-.11-.28-.24-.28-.46,0-.55.75-1.92.75-1.33,0-2.24-1.2-2.24-2.54,0-1.82.91-2.73,2.66-3.86.91-.56,2.11-1.55,2.74-2.58.63,1.03,1.81,2.02,2.74,2.58,1.76,1.14,2.66,2.06,2.66,3.86,0,1.35-.91,2.54-2.24,2.54-1.37,0-1.48-.75-1.92-.75-.15,0-.24.11-.24.28,0,.86.71,1.84,1.92,2.11,1.11.17,2.08-.22,2.94-.87.87-.78,1.49-1.99,1.49-3.45,0-2.55-1.33-3.93-3.12-5.78Z"/></svg>Co-Founder of Octopi Poker</li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3.5c-2.6 3.1-6.5 5.4-6.5 8.8 0 2 1.5 3.4 3.3 3.4 1 0 1.9-.4 2.5-1.1-.2 1.7-.9 3.2-2.1 4.4h5.6c-1.2-1.2-1.9-2.7-2.1-4.4.6.7 1.5 1.1 2.5 1.1 1.8 0 3.3-1.4 3.3-3.4 0-3.4-3.9-5.7-6.5-8.8Z"/></svg>Professional Poker Player</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 4.5h9v4.2a4.5 4.5 0 0 1-9 0V4.5Z"/><path d="M7.5 6.5H5a2.5 2.5 0 0 0 2.8 3.4M16.5 6.5H19a2.5 2.5 0 0 1-2.8 3.4"/><path d="M12 13.2v3.3M8.5 19.5h7M9.5 19.5l.6-3h3.8l.6 3"/></svg>$3.3 Million Career Winnings</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.8 2.5 5.1 5.6.8-4 3.9 1 5.6L12 16.6l-5 2.6 1-5.6-4-3.9 5.5-.8L12 3.8Z"/></svg>4 PGT / EPT Titles</li>
+        </ul>
+      </div>
+    </article>
+    <article class="person">
+      <div class="photo"><img class="crop" src="images/coach-kerryjane.webp" alt="Portrait of Kerryjane Craigie" width="1254" height="1254" loading="lazy"></div>
+      <div class="body">
+        <p class="role">Co-founder &amp; Partner</p>
+        <h3>Kerryjane Craigie</h3>
+        <p class="org">Ladies of the Hippodrome League</p>
+        <!-- TODO: real bio from Kerryjane -->
+        <div class="bio">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto;width:20px;height:20px;color:var(--lavender);margin-top:2px"><circle cx="12" cy="8" r="2.8"/><path d="M6.8 18.5c.4-2.8 2.6-4.6 5.2-4.6s4.8 1.8 5.2 4.6"/><circle cx="5.6" cy="9.6" r="2"/><circle cx="18.4" cy="9.6" r="2"/><path d="M2.5 17.5c.3-2 1.6-3.3 3.4-3.6M21.5 17.5c-.3-2-1.6-3.3-3.4-3.6"/></svg>
+          <p>Kerryjane brings the Ladies of the Hippodrome League community to Women in Poker, connecting women players in the UK and beyond.</p>
+        </div>
+      </div>
     </article>
   </div>
 </section>
@@ -330,54 +365,22 @@ section{position:relative;z-index:1}
   <div class="lect">
     <div>
       <p class="eyebrow">Monthly lectures</p>
-      <h2 class="section-title">Live with your coach, every first Wednesday</h2>
-      <p class="section-sub">Lectures run on the first Wednesday of every month. Can't make it live? Every session is recorded and shared with members.</p>
+      <h2 class="section-title">One Wednesday. Every month.</h2>
+      <p class="section-sub">Live lectures with coach Victoria Livschitz on the first Wednesday of every month. Can't make it live? Every lecture is recorded and stays available to members.</p>
       <ul class="lect-facts">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg><span><b>10:00 AM Pacific Time</b> (PST)</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke-linecap="round"/></svg><span><b>Starts December 2, 2026</b></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke-linecap="round"/></svg><span><b>First Wednesday</b> of every month</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg><span><b>10:00 AM Pacific Time</b></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01" stroke-linecap="round"/></svg><span><b>Starts December 2, 2026</b></span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16v10H8l-4 4z" stroke-linejoin="round"/></svg><span>Dial-in details are sent to members separately</span></li>
       </ul>
     </div>
     <div class="dates" aria-label="Upcoming lectures">
       <h3>Upcoming lectures</h3>
-      <div id="date-list">
-        <!-- Rendered with local times by script; static fallback below -->
-        <div class="date-row first"><div class="date-badge"><small>Dec</small><strong>2</strong></div><div class="date-info"><em class="first-tag">First lecture</em><b>Wednesday, December 2, 2026</b><span>10:00 AM PST</span></div></div>
-        <div class="date-row"><div class="date-badge"><small>Jan</small><strong>6</strong></div><div class="date-info"><b>Wednesday, January 6, 2027</b><span>10:00 AM PST</span></div></div>
-        <div class="date-row"><div class="date-badge"><small>Feb</small><strong>3</strong></div><div class="date-info"><b>Wednesday, February 3, 2027</b><span>10:00 AM PST</span></div></div>
-        <div class="date-row"><div class="date-badge"><small>Mar</small><strong>3</strong></div><div class="date-info"><b>Wednesday, March 3, 2027</b><span>10:00 AM PST</span></div></div>
-      </div>
-      <p class="tz-note" id="tz-note"></p>
+      <div class="date-row first"><div class="date-badge"><small>Dec</small><strong>2</strong></div><div class="date-info"><em class="first-tag">First lecture</em><b>Wednesday, December 2, 2026</b><span>10:00 AM PT</span></div></div>
+      <div class="date-row"><div class="date-badge"><small>Jan</small><strong>6</strong></div><div class="date-info"><b>Wednesday, January 6, 2027</b><span>10:00 AM PT</span></div></div>
+      <div class="date-row"><div class="date-badge"><small>Feb</small><strong>3</strong></div><div class="date-info"><b>Wednesday, February 3, 2027</b><span>10:00 AM PT</span></div></div>
+      <div class="date-row"><div class="date-badge"><small>Mar</small><strong>3</strong></div><div class="date-info"><b>Wednesday, March 3, 2027</b><span>10:00 AM PT</span></div></div>
     </div>
-  </div>
-</section>
-
-<!-- PEOPLE -->
-<section id="founders" class="wrap pad rv">
-  <p class="eyebrow">Founders &amp; coach</p>
-  <h2 class="section-title">Meet the founders</h2>
-  <p class="section-sub">Women in Poker is co-founded by Octopi Poker and Ladies of the Hippodrome League.</p>
-  <div class="people">
-    <article class="person">
-      <div class="avatar" aria-hidden="true">VL</div>
-      <div>
-        <p class="role">Coach · Co-founder</p>
-        <h3>Victoria Livschitz</h3>
-        <p class="org">Octopi Poker</p>
-        <!-- TODO: short bio from Victoria -->
-        <p>Victoria leads the monthly lectures and guides the program's curriculum, from solver basics to applying strategy at the table.</p>
-      </div>
-    </article>
-    <article class="person">
-      <div class="avatar alt" aria-hidden="true">KC</div>
-      <div>
-        <p class="role">Co-founder</p>
-        <h3>Kerryjane Craigie</h3>
-        <p class="org">Ladies of the Hippodrome League</p>
-        <!-- TODO: short bio from Kerryjane -->
-        <p>Kerryjane brings the Ladies of the Hippodrome League community to the program, connecting women players from the UK and beyond.</p>
-      </div>
-    </article>
   </div>
 </section>
 
@@ -385,20 +388,20 @@ section{position:relative;z-index:1}
 <section id="join" class="wrap pad rv">
   <div class="center">
     <p class="eyebrow">How to join</p>
-    <h2 class="section-title">Three ways to join</h2>
-    <p class="section-sub">Membership is voluntary — join whenever you're ready and leave at any time.</p>
+    <h2 class="section-title">Three ways in</h2>
+    <p class="section-sub">Membership is voluntary and open to women everywhere — join whenever you're ready and leave at any time.</p>
   </div>
   <div class="join-grid">
     <article class="way">
       <span class="way-n">01</span>
       <h3>Click "Join now"</h3>
-      <p>The fastest way in. You'll be taken straight to the Women in Poker group on Octopi.</p>
+      <p>The fastest way in — straight to the Women in Poker community on Octopi.</p>
       <a class="btn-cta push" href="https://octopipoker.ai/groups/invite/t_TD1IRiWFiP7XOchKRn5A" data-cta="join-card">Join now</a>
     </article>
     <article class="way">
       <span class="way-n">02</span>
       <h3>Subscribe with our code</h3>
-      <p>Getting an Octopi Poker subscription? Use this code at checkout to join the program.</p>
+      <p>Getting an Octopi Poker subscription? Use this code at checkout to join the community.</p>
       <div class="code push">
         <span id="promo">Poker4Women</span>
         <button type="button" id="copy-btn" aria-label="Copy code Poker4Women">Copy</button>
@@ -419,7 +422,7 @@ section{position:relative;z-index:1}
   <h2 class="section-title">Brought to you by</h2>
   <div class="sponsors">
     <div class="sponsor"><img src="images/octopi-logo-white.svg" alt="Octopi Poker" width="120" height="40"></div>
-    <span class="sponsor-x" aria-hidden="true">×</span>
+    <span class="sponsor-x" aria-hidden="true">&amp;</span>
     <!-- TODO: Hippodrome logo -->
     <div class="sponsor"><span class="partner-text">Ladies of the<b>Hippodrome League</b></span></div>
   </div>
@@ -428,22 +431,22 @@ section{position:relative;z-index:1}
 <!-- FAQ -->
 <section id="faq" class="wrap pad rv">
   <div class="center">
-    <p class="eyebrow">FAQ</p>
-    <h2 class="section-title">Questions</h2>
+    <p class="eyebrow">Questions</p>
+    <h2 class="section-title">Before you join</h2>
   </div>
   <div class="faq-list">
     <div class="qa"><button type="button" aria-expanded="false">Who can join?<span class="plus"></span></button>
-      <div class="a"><p>The program is open to all women — anyone who identifies as a woman — anywhere in the world, at any skill level.</p></div></div>
-    <div class="qa"><button type="button" aria-expanded="false">Is it really free?<span class="plus"></span></button>
-      <!-- TODO: confirm subscription wording with Victoria -->
-      <div class="a"><p>Yes — the program is free. The My First Solver course and the monthly lectures cost nothing. The Women in Poker group lives inside Octopi Poker, so if you don't have an Octopi subscription yet, you'll be offered one when you open the invite — use code <b>Poker4Women</b> at checkout.</p></div></div>
+      <div class="a"><p>Women from anywhere in the world, at any level — from your first hands to years at the table. There are no experience requirements.</p></div></div>
+    <div class="qa"><button type="button" aria-expanded="false">Is this a poker course?<span class="plus"></span></button>
+      <div class="a"><p>Not exactly. Women in Poker is a community first — a place to meet, talk and play with other women. Membership comes with a free education program: a starter course, monthly lectures and weekly practice.</p></div></div>
+    <div class="qa"><button type="button" aria-expanded="false">Is there an additional cost to join the Women in Poker program?<span class="plus"></span></button>
+      <div class="a"><p>No! The Women in Poker program is included at no extra cost with an Octopi Personal or Professional membership. This includes full access to the My First Solver course, monthly video lectures, weekly study assignments, and a private women's study group.</p><p>If you're already a Personal or Professional member, there's nothing extra to pay. If you're not yet a member, you can sign up using the code <b>Poker4Women</b> at checkout.</p></div></div>
     <div class="qa"><button type="button" aria-expanded="false">When are the lectures?<span class="plus"></span></button>
       <div class="a"><p>On the first Wednesday of every month at 10:00 AM Pacific Time, starting December 2, 2026. Dial-in details are sent to members separately, and recordings are shared after each session.</p></div></div>
     <div class="qa"><button type="button" aria-expanded="false">How do I join the Discord?<span class="plus"></span></button>
-      <!-- TODO: replace with a permanent (non-expiring) Discord invite -->
-      <div class="a"><p>Members can join our private Discord here: <a href="https://discord.gg/yrNg5E2b" target="_blank" rel="noopener">discord.gg/yrNg5E2b</a>.</p></div></div>
-    <div class="qa"><button type="button" aria-expanded="false">Can I leave the program?<span class="plus"></span></button>
-      <div class="a"><p>Of course. Membership is voluntary — you can join and leave at any time.</p></div></div>
+      <div class="a"><p>Our private Discord is where the community talks hands, asks questions and keeps in touch between lectures. Join here: <a href="https://discord.gg/octopipoker" target="_blank" rel="noopener">discord.gg/octopipoker</a></p></div></div>
+    <div class="qa"><button type="button" aria-expanded="false">Can I leave?<span class="plus"></span></button>
+      <div class="a"><p>Of course. Membership is voluntary — join whenever you like and leave at any time.</p></div></div>
   </div>
 </section>
 
@@ -451,9 +454,9 @@ section{position:relative;z-index:1}
 <section class="wrap pad rv">
   <div class="closing-panel">
     <h2>Your seat at the table is waiting</h2>
-    <p>Join Women in Poker today and get ready for the first live lecture on December 2.</p>
+    <p>Join the community today — our first live lecture is on Wednesday, December 2.</p>
     <div class="cta-stack">
-      <a class="btn-cta" href="https://octopipoker.ai/groups/invite/t_TD1IRiWFiP7XOchKRn5A" data-cta="closing">Join now
+      <a class="btn-cta" href="https://octopipoker.ai/groups/invite/t_TD1IRiWFiP7XOchKRn5A" data-cta="closing">Join the community
         <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <span class="cta-note">Free to join · Leave anytime</span>
     </div>
@@ -504,27 +507,6 @@ document.querySelectorAll('.qa > button').forEach(function(btn){
   });
 })();
 
-// Lecture dates in the visitor's local time (10:00 PST = 18:00 UTC; all listed dates fall in PST)
-(function(){
-  try{
-    var dates=[Date.UTC(2026,11,2,18),Date.UTC(2027,0,6,18),Date.UTC(2027,1,3,18),Date.UTC(2027,2,3,18)];
-    var now=Date.now();
-    var upcoming=dates.filter(function(d){return d+2*3600e3>now});
-    if(!upcoming.length)return;
-    var tz=Intl.DateTimeFormat().resolvedOptions().timeZone;
-    var f=function(o){return new Intl.DateTimeFormat('en-US',o)};
-    var mon=f({month:'short',timeZone:'America/Los_Angeles'}),day=f({day:'numeric',timeZone:'America/Los_Angeles'}),
-        full=f({weekday:'long',month:'long',day:'numeric',year:'numeric',timeZone:'America/Los_Angeles'}),
-        local=f({weekday:'short',hour:'numeric',minute:'2-digit',timeZoneName:'short'});
-    var html=upcoming.map(function(d,i){
-      var dt=new Date(d),isFirst=d===dates[0];
-      return '<div class="date-row'+(i===0?' first':'')+'"><div class="date-badge"><small>'+mon.format(dt)+'</small><strong>'+day.format(dt)+'</strong></div>'+
-        '<div class="date-info">'+(isFirst?'<em class="first-tag">First lecture</em>':'')+'<b>'+full.format(dt)+'</b><span>10:00 AM PST · '+local.format(dt)+' your time</span></div></div>';
-    }).join('');
-    document.getElementById('date-list').innerHTML=html;
-    if(tz)document.getElementById('tz-note').textContent='Local times shown for '+tz.replace(/_/g,' ')+'.';
-  }catch(e){}
-})();
 </script>
 </body>
 </html>
